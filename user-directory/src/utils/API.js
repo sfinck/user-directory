@@ -1,12 +1,12 @@
-import axios from "axios";
+// import axios from "axios";
 
-const BASEURL = "https://randomuser.me/api/";
-console.log(BASEURL)
+// const BASEURL = "https://randomuser.me/api/";
+// console.log(BASEURL)
 
-const exportedObject = {
-  search: function (query) {
-    return axios.get(BASEURL + query);
-  }
-}
+// const exportedObject = {
+//   search: function (query) {
+//     return axios.get(BASEURL + query);
+//   }
+// }
 
-export default exportedObject;
+// export default exportedObject;

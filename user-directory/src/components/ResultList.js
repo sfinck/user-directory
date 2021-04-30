@@ -1,15 +1,27 @@
-// import React from "react";
+import React from "react";
 
-// function ResultList(props) {
-//   return (
-//     <ul className="list-group">
-//       {props.results.map(result=> (
-//         <li className="list-group-item" key={result.id}>
-//           <img alt={result.name} className="img-fluid" src={result.picture.thumbnail} />
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// }
+function ResultList(props) {
+    return (
 
-// export default ResultList;
+
+        <table>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+
+            {props.data.map((user, index) => (
+                <tr>
+                    <td key={index}>{user.name.first}</td>
+                    <td key={index + 1}>{user.name.last}</td>
+                    <td key={index + 2} >{user.dob.age} </td>
+                </tr>
+            ))}
+        </table>
+
+    );
+
+}
+
+export default ResultList;

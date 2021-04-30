@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ResultList from "./components/ResultList";
 
 class App extends Component {
   constructor(props) {
@@ -10,20 +11,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('https://randomuser.me/api/')
+    fetch('https://randomuser.me/api/?results=100&nat=us')
       .then(res => res.json())
       .then(json => {
         this.setState({
           isLoaded: true,
-          randomUsers: json,
+          randomUsers: json.results,
         })
       })
   }
 
   render() {
+    function sortByAge() {
+      // sort the this.state.randomUser's age by asc
+    }
 
-    var { isLoaded, randomUsers } = this.state;
-
+    var { isLoaded } = this.state;
+    
     if (!isLoaded) {
       return <div>Loading...</div>;
     }
@@ -32,13 +36,9 @@ class App extends Component {
 
       return (
         <div className="App">
-          <ul>
-            {randomUsers.map(user => (
-              <li key={user.res}>
-               Name: {user.res.name}
-              </li>
-            ))}
-          </ul>
+          Successful
+          <button onClick={sortByAge}>Filter by Age</button>
+          <ResultList data={this.state.randomUsers} />
         </div>
       )
     }

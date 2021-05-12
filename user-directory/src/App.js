@@ -24,7 +24,14 @@ class App extends Component {
   render() {
     function sortByAge() {
       // sort the this.state.randomUser's age by asc
+    
     }
+
+    function filterByName() {
+      // filter the this.state.randomUser's name by key word 
+    }
+
+  
 
     var { isLoaded } = this.state;
     
@@ -36,8 +43,8 @@ class App extends Component {
 
       return (
         <div className="App">
-          Successful
-          <button onClick={sortByAge}>Filter by Age</button>
+          <button onClick={sortByAge}>Sort by Age</button>
+          <button onClick={filterByName}>Filter by Age</button>
           <ResultList data={this.state.randomUsers} />
         </div>
       )
@@ -46,11 +53,3 @@ class App extends Component {
 }
 
 export default App;
-
-// import SearchResultContainer from "./components/SearchResultContainer";
-
-// function App() {
-//   return <SearchResultContainer />;
-// }
-
-// export default App;

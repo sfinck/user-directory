@@ -44,7 +44,7 @@ class App extends Component {
       return (
         <div className="App">
           <button onClick={sortByAge}>Sort by Age</button>
-          <button onClick={filterByName}>Filter by Age</button>
+          <button onClick={filterByName}>Filter by Name</button>
           <ResultList data={this.state.randomUsers} />
         </div>
       )

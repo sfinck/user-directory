@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   render() {
-    function sortByAge() {
+    function sortByName() {
       // sort the this.state.randomUser's age by asc
 
     }
@@ -42,7 +42,8 @@ class App extends Component {
 
       return (
         <div className="App">
-          <button onClick={sortByAge}>Sort by Age</button>
+          <h1>Employee Directory</h1>
+          <button onClick={sortByName}>Sort by Name</button>
           <button onClick={filterByName}>Filter by Name</button>
           <div className="card scroll">
             <ResultList data={this.state.randomUsers} />

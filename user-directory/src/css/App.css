@@ -1,0 +1,16 @@
+.App {
+    text-align: center;
+    justify-content: center;
+    float: left;
+  }
+  
+  .card {
+    text-align: left;
+    max-width: 500px;
+    font-weight: 100;
+  }
+  
+  .scroll {
+    max-height: 500px;
+    overflow-y: auto;
+}

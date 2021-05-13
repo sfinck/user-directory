@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ResultList from "./components/ResultList";
+import './css/App.css'
 
 class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class App extends Component {
   render() {
     function sortByAge() {
       // sort the this.state.randomUser's age by asc
-    
+
     }
 
     function filterByName() {
@@ -32,7 +33,7 @@ class App extends Component {
     }
 
     var { isLoaded } = this.state;
-    
+
     if (!isLoaded) {
       return <div>Loading...</div>;
     }
@@ -43,7 +44,9 @@ class App extends Component {
         <div className="App">
           <button onClick={sortByAge}>Sort by Age</button>
           <button onClick={filterByName}>Filter by Name</button>
-          <ResultList data={this.state.randomUsers} />
+          <div className="card scroll">
+            <ResultList data={this.state.randomUsers} />
+          </div>
         </div>
       )
     }

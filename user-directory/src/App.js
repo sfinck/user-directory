@@ -31,8 +31,6 @@ class App extends Component {
       // filter the this.state.randomUser's name by key word 
     }
 
-  
-
     var { isLoaded } = this.state;
     
     if (!isLoaded) {
